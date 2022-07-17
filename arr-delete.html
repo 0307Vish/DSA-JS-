@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELETE elment in an array</title>
+    <style>
+        *{
+            background: rgb(14, 19, 7);
+           color: azure;
+        
+        }
+    
+    </style>
+   
+</head>
+
+<body>
+
+
+
+    <script>
+        //1.algorithm
+//    let data = [1, 2, 3, 3, 4, 5]
+
+//         //here we want to  remove 3 of index no.3 to makec correct  our counting
+//         let position = 5
+//         for (let i = 3; i < data.length - 1; i++) {
+//             data[i] = data[i + 1]
+//         }
+//         document.write('<br>')
+//         data.length=data.length-1
+//         document.write(data)
+        
+//2.making dynamic
+//    let data = [1, 2, 3, 3, 4, 5]   
+//         let position = 0
+//         for (let i = position; i < data.length - 1; i++) {
+//             data[i] = data[i + 1]
+//         }
+//         document.write('<br>')
+//         data.length=data.length-1
+//         document.write(data)
+        
+
+//3.application
+   function delet(){
+   let data = [1, 2, 3, 3, 4, 5]
+     let  x=document.getElementById(`demo`)
+        let position = document.getElementById('index').value
+        position=parseInt(position);
+        for (let i = position; i < data.length - 1; i++)
+         {
+            data[i] = data[i + 1]
+        }
+        document.write('<br>')
+        data.length=data.length-1
+        alert(data)
+      
+    }
+    
+
+
+
+    //4.Validation
+//    function delet(){
+//    let data = [1, 2, 3, 3, 4, 5]
+
+        
+//         let position = document.getElementById('index').value
+//         position=parseInt(position);
+//         for (let i = position; i < data.length - 1; i++) {
+//             data[i] = data[i + 1]
+//         }
+//         document.write('<br>')
+//         data.length=data.length-1
+//         document.write(data)
+        
+//     }
+
+    </script>
+
+
+    <div class=" main">
+    <p>Your raw array is : [1,2,3,3,4,5]</p>
+    <input  id="index"  type="text" placeholder="Enter postion "/>
+
+ 
+    <button onClick="delet()">DELETE</button>
+  
+</div>
+
+
+</body>
+
+</html>
