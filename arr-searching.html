@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH elment in an array</title>
+    <style>
+        *{
+            background: rgb(14, 19, 7);
+           color: azure;
+        
+        }
+    
+    </style> 
+   
+</head>
+
+<body>
+    <script>
+                                                              
+// let data =[1,2,3,23,4,5,6,7,8,9,10]
+// let item = 23 // elememt to be searched
+// let index       // index of element
+
+// for(i=0;i<data.length-1;i++)
+// {
+//     if(data[i]===item)
+//     {
+//         index=i;
+//         break;
+//     }
+// }
+// alert(index)
+
+
+
+
+function myfun()
+{
+let data =[1,2,3,23,4,5,6,7,8,9,10]
+let item = document.getElementById('value').value  
+ item=parseInt(item)
+// elememt to be searched
+let index      
+ // index of element
+
+for(i=0;i<=data.length-1;i++)
+{
+    if(data[i]===item)
+    {
+        index=i;
+        break;
+    }
+}
+alert(index)
+}
+
+
+
+
+</script>
+</body>
+    <input type="text" id="value" placeholder="enter value">
+    <button id="btn" onclick="myfun()">SEARCH</button>
+</html>
