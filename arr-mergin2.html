@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrege 2 arrays in 3rd( while loop)</title>
+    <style>
+        * {
+            background: rgb(14, 19, 7);
+            color: azure;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+let data1=[3,7,12,34,56,90];    // index no. i
+let data2=[4,9,25.45];              // index no. j
+let data3=[]                // index no. k
+let i=0
+let j=0
+let k=0
+while( i<data1.length&&j<data2.length)
+{
+ if(data1[i]<data2[j])
+ {
+     data3[k]=data1[i]
+     i++;
+ }
+ else
+ {
+     data3[k]=data2[j]
+     j++;
+ }
+ k++;
+}   
+while(i<data1.length)
+{
+    data3[k]=data1[i]
+    i++;
+    k++;
+}
+ document.write(data3) 
+
+    </script>
+
+    <p>it will  require sorted arrays as input and will  return sorted
+        array</p>
+</body>
+
+
+</html>
+time complexity
+30line
+
+6 space complexity
