@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InDirect recursion</title>
+    <style>
+        *{
+            background: rgb(14, 19, 7);
+           color: azure;
+        
+        }
+    
+    </style>
+   
+</head>
+
+<body>
+
+
+
+    <script>
+       // 1.
+        //   let money =100;
+        //   let totalapple =0;
+        //   //let price =10 // for each apple
+
+
+        //   function buyapple(x){
+        //     // console.warn(x);
+        //     if(x>0){
+        //         console.log(" I have",x,"RS",totalapple,"apple")
+        //         buymore(x);
+        //     }
+        //     else{
+        //         console.log("I don't have more money", totalapple)
+
+        //     }
+        //   }
+
+
+        //   function buymore(x){
+        //     totalapple++;
+        //     buyapple(x-10);
+        //   }
+
+
+        //   buyapple(money);
+
+
+
+
+
+
+
+
+        //2.dynamic
+
+        let money = 100;
+        let totalapple = 0;
+        let price = 10 // for each apple
+
+
+        function buyapple(x) {
+            // console.warn(x);
+            if (x > 0) {
+                console.log(" I have", x, "RS", totalapple, "apple")
+                buymore(x);
+            }
+            else {
+                console.log("I don't have more money but", totalapple,"apple")
+
+            }
+        }
+
+
+        function buymore(x) {
+            totalapple++;
+            buyapple(x - price);
+        }
+
+
+        buyapple(money);
+
+
+
+
+    //     function test(x){
+    //         console.log(x)
+    //       if(x>0){test(x-1)}
+    //     }
+    // let data =5
+    //   test(data)
+
+
+    function test(x){
+           
+          if(x>0){test(x-1)}
+          console.log(x)
+        }
+    let data =5
+      test(data)
+
+ 
+    </script>
+
+
+
+</body>
+
+</html>
